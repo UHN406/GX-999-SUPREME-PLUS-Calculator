@@ -1,4 +1,3 @@
-from ast import Global
 import math
 import tkinter as tk
 from tkinter import messagebox
@@ -116,75 +115,16 @@ class Calculator:
             self.btn.pack(side=tk.LEFT, fill=tk.X, padx=8, pady=7)
     
     def top_buttons(self):
-        global TOP_BUTTONS
+        self.top_button = [["r1", "r1b1", "r1b2", "r1b3", "r1b4", "r1b5", "r1b6"],
+                           ["r2", "r2b1", "r2b2", "r2b3", "r2b4", "r2b5", "r2b6"],
+                           ["r3", "r3b1", "r3b2", "r3b3", "r3b4", "r3b5", "r3b6"]]
         
-        self.r1 = tk.Frame(self.window, bg=CALCULATOR_BACKGROUND_COLOR)
-        self.r1.pack(side=tk.TOP, fill=tk.X, padx=CALCULATOR_PADDING, pady=(CALCULATOR_PADDING/3))
-        
-        self.r1b1 = tk.Button(self.r1, text=TOP_BUTTONS[0][0][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[0][0]: self.top_button_click(x))
-        self.r1b1.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r1b2 = tk.Button(self.r1, text=TOP_BUTTONS[0][1][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[0][1]: self.top_button_click(x))
-        self.r1b2.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r1b3 = tk.Button(self.r1, text=TOP_BUTTONS[0][2][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[0][2]: self.top_button_click(x))
-        self.r1b3.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r1b4 = tk.Button(self.r1, text=TOP_BUTTONS[0][3][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[0][3]: self.top_button_click(x))
-        self.r1b4.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r1b5 = tk.Button(self.r1, text=TOP_BUTTONS[0][4][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[0][4]: self.top_button_click(x))
-        self.r1b5.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r1b6 = tk.Button(self.r1, text=TOP_BUTTONS[0][5][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[0][5]: self.top_button_click(x))
-        self.r1b6.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        
-        
-        
-        self.r2 = tk.Frame(self.window, bg=CALCULATOR_BACKGROUND_COLOR)
-        self.r2.pack(side=tk.TOP, fill=tk.X, padx=CALCULATOR_PADDING, pady=(CALCULATOR_PADDING/3))
-        
-        self.r2b1 = tk.Button(self.r2, text=TOP_BUTTONS[1][0][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[1][0]: self.top_button_click(x))
-        self.r2b1.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r2b2 = tk.Button(self.r2, text=TOP_BUTTONS[1][1][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[1][1]: self.top_button_click(x))
-        self.r2b2.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r2b3 = tk.Button(self.r2, text=TOP_BUTTONS[1][2][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[1][2]: self.top_button_click(x))
-        self.r2b3.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r2b4 = tk.Button(self.r2, text=TOP_BUTTONS[1][3][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[1][3]: self.top_button_click(x))
-        self.r2b4.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r2b5 = tk.Button(self.r2, text=TOP_BUTTONS[1][4][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[1][4]: self.top_button_click(x))
-        self.r2b5.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r2b6 = tk.Button(self.r2, text=TOP_BUTTONS[1][5][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[1][5]: self.top_button_click(x))
-        self.r2b6.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        
-        
-        self.r3 = tk.Frame(self.window, bg=CALCULATOR_BACKGROUND_COLOR)
-        self.r3.pack(side=tk.TOP, fill=tk.X, padx=CALCULATOR_PADDING, pady=(CALCULATOR_PADDING/3))
-        
-        self.r3b1 = tk.Button(self.r3, text=TOP_BUTTONS[2][0][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[2][0]: self.top_button_click(x))
-        self.r3b1.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r3b2 = tk.Button(self.r3, text=TOP_BUTTONS[2][1][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[2][1]: self.top_button_click(x))
-        self.r3b2.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r3b3 = tk.Button(self.r3, text=TOP_BUTTONS[2][2][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[2][2]: self.top_button_click(x))
-        self.r3b3.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r3b4 = tk.Button(self.r3, text=TOP_BUTTONS[2][3][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[2][3]: self.top_button_click(x))
-        self.r3b4.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r3b5 = tk.Button(self.r3, text=TOP_BUTTONS[2][4][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[2][4]: self.top_button_click(x))
-        self.r3b5.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
-        
-        self.r3b6 = tk.Button(self.r3, text=TOP_BUTTONS[2][5][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[2][5]: self.top_button_click(x))
-        self.r3b6.pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
+        for i in range(3):
+            self.top_button[i][0] = tk.Frame(self.window, bg=CALCULATOR_BACKGROUND_COLOR)
+            self.top_button[i][0].pack(side=tk.TOP, fill=tk.X, padx=CALCULATOR_PADDING, pady=(CALCULATOR_PADDING/3))
+            for j in range(6):
+                self.top_button[i][j+1] = tk.Button(self.top_button[i][0], text=TOP_BUTTONS[i][j][0], **TOP_BUTTON_COMMON_PARAMETERS, command=lambda x=TOP_BUTTONS[i][j]: self.top_button_click(x))
+                self.top_button[i][j+1].pack(side=tk.LEFT, fill=tk.X, padx=CALCULATOR_PADDING+2, pady=CALCULATOR_PADDING)
     
     def bottom_buttons(self):
         global BOTTOM_BUTTONS
@@ -246,27 +186,10 @@ class Calculator:
             X=2
             bgcolor = TOP_BUTTON_BACKGROUND_COLOR_ALPHA
         
-        self.r1b1.config(text=TOP_BUTTONS[0][0][X], bg=bgcolor)
-        self.r1b2.config(text=TOP_BUTTONS[0][1][X], bg=bgcolor)
-        self.r1b3.config(text=TOP_BUTTONS[0][2][X], bg=bgcolor)
-        self.r1b4.config(text=TOP_BUTTONS[0][3][X], bg=bgcolor)
-        self.r1b5.config(text=TOP_BUTTONS[0][4][X], bg=bgcolor)
-        self.r1b6.config(text=TOP_BUTTONS[0][5][X], bg=bgcolor)
+        for i in range(3):
+            for j in range(6):
+                self.top_button[i][j+1].config(text=TOP_BUTTONS[i][j][X], bg=bgcolor)
         
-        self.r2b1.config(text=TOP_BUTTONS[1][0][X], bg=bgcolor)
-        self.r2b2.config(text=TOP_BUTTONS[1][1][X], bg=bgcolor)
-        self.r2b3.config(text=TOP_BUTTONS[1][2][X], bg=bgcolor)
-        self.r2b4.config(text=TOP_BUTTONS[1][3][X], bg=bgcolor)
-        self.r2b5.config(text=TOP_BUTTONS[1][4][X], bg=bgcolor)
-        self.r2b6.config(text=TOP_BUTTONS[1][5][X], bg=bgcolor)
-            
-        self.r3b1.config(text=TOP_BUTTONS[2][0][X], bg=bgcolor)
-        self.r3b2.config(text=TOP_BUTTONS[2][1][X], bg=bgcolor)
-        self.r3b3.config(text=TOP_BUTTONS[2][2][X], bg=bgcolor)
-        self.r3b4.config(text=TOP_BUTTONS[2][3][X], bg=bgcolor)
-        self.r3b5.config(text=TOP_BUTTONS[2][4][X], bg=bgcolor)
-        self.r3b6.config(text=TOP_BUTTONS[2][5][X], bg=bgcolor)
-    
     def shift(self):
         global ALPHA
         ALPHA = False
@@ -299,7 +222,6 @@ class Calculator:
         self.button_clicked(btn[TOP_BUTTON_STATE])
     
     def bottom_button_click(self, btn):
-        global BOTTOM_BUTTONS
         self.button_clicked(btn)
     
     def button_clicked(self, btn):
