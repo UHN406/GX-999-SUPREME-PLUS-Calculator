@@ -267,39 +267,39 @@ class Calculator:
                 EXPRESSION += "**2"
                 self.expression_field.insert(tk.END, "**2")
             
-            if btn == "X³":
+            elif btn == "X³":
                 EXPRESSION += "**3"
                 self.expression_field.insert(tk.END, "**3")
             
-            if btn == "Xⁿ":
+            elif btn == "Xⁿ":
                 EXPRESSION += "**"
                 self.expression_field.insert(tk.END, "**")
             
-            if btn == "10ⁿ":
+            elif btn == "10ⁿ":
                 EXPRESSION += "10**"
                 self.expression_field.insert(tk.END, "10**")
             
-            if btn == "eⁿ":
+            elif btn == "eⁿ":
                 EXPRESSION += "2.718**"
                 self.expression_field.insert(tk.END, "e**")
             
-            if btn == "√x":
+            elif btn == "√x":
                 EXPRESSION += "²√("
                 self.expression_field.insert(tk.END, "²√(")
             
-            if btn == "³√x":
+            elif btn == "³√x":
                 EXPRESSION += "³√("
                 self.expression_field.insert(tk.END, "³√(")
             
-            if btn == "ⁿ√x":
+            elif btn == "ⁿ√x":
                 EXPRESSION += "ⁿ√("
                 self.expression_field.insert(tk.END, "ⁿ√(")
             
-            if btn == "logₐn":
+            elif btn == "logₐn":
                 EXPRESSION += "log("
                 self.expression_field.insert(tk.END, "log(")
             
-            if btn == "ln":
+            elif btn == "ln":
                 EXPRESSION += "ln("
                 self.expression_field.insert(tk.END, "ln(")
         
